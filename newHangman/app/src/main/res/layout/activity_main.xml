@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:textSize="30sp"
+        android:hint="@string/CS_Hangman"
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginLeft="15dp"
+    >
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/hangman_0"
+        android:contentDescription="TODO" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/theword"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:id="@+id/showtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        />
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wordTv"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/init_word"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Guess"
+
+            />
+
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/new_game"
+            android:onClick="newGameStart"
+            android:textColorHint="@color/white"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/move"
+            />
+    <TextView
+
+        android:id="@+id/wordToFindTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordTv"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textSize="22sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="A" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="B" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="C" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="D" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="E" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="F" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="G" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="H" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="I" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="J" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="K" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="L" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="M" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="N" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="O" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="P" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="Q" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="R" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="S" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="T" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="U" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="V" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="W" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="X" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="Y" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:onClick="touchLetter"
+                android:text="Z" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
